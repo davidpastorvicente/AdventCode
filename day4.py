@@ -2,6 +2,9 @@
 
 import re
 
+file = open('./input4.txt')
+text = file.read()
+
 
 def del_cid(data):
     if 'cid' in data.keys():
@@ -13,9 +16,6 @@ def to_dict(data):
     it = iter(data)
     return del_cid(dict(zip(it, it)))
 
-
-file = open('./input4.txt')
-text = file.read()
 
 lines = text.split('\n\n')
 lines = list(map(lambda x: re.sub(r'[\n:]', ' ', x).split(), lines))
