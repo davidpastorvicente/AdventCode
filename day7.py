@@ -24,7 +24,7 @@ for i in lines:
 # First problem
 
 def find_sons(color):
-    return list(map(lambda c: c[1], bags[color]))
+    return list(map(lambda col: col[1], bags[color]))
 
 
 def find_parents(color):
@@ -48,7 +48,7 @@ print(len(new_parents))
 # Second problem
 
 def find_numbers(color):
-    return list(map(lambda c: c[0], bags[color]))
+    return list(map(lambda col: col[0], bags[color]))
 
 
 def get_sons(color):

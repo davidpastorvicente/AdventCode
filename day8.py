@@ -31,25 +31,18 @@ print(good_game(instructions)[1])
 
 # Second problem
 
-nops, jumps = [], []
+def change_instruction(instruction):
+    if instruction == 'acc':
+        return instruction
+    else:
+        return 'jmp' if instruction == 'nop' else 'nop'
+
+
 for i in range(len(instructions)):
-    if instructions[i][0] == 'nop':
-        nops.append(i)
-    elif instructions[i][0] == 'jmp':
-        jumps.append(i)
-
-for i in nops:
-    instructions[i][0] = 'jmp'
+    instructions[i][0] = change_instruction(instructions[i][0])
     result = good_game(instructions)
     if result[0]:
         print(result[1])
+        break
 
-    instructions[i][0] = 'nop'
-
-for i in jumps:
-    instructions[i][0] = 'nop'
-    result = good_game(instructions)
-    if result[0]:
-        print(result[1])
-
-    instructions[i][0] = 'jmp'
+    instructions[i][0] = change_instruction(instructions[i][0])
