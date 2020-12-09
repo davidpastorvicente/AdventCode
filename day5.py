@@ -10,8 +10,8 @@ lines = text.split('\n')
 
 # First problem
 
-lines = list(map(lambda x: re.sub(r'[B|R]', '1', x), lines))
-seats = list(map(lambda x: int(re.sub(r'[F|L]', '0', x), 2), lines))
+lines = list(map(lambda x: re.sub(r'[BR]', '1', x), lines))
+seats = list(map(lambda x: int(re.sub(r'[FL]', '0', x), 2), lines))
 
 print(max(seats))
 
