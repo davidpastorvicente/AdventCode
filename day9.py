@@ -14,7 +14,6 @@ def is_valid(number, index):
 
     for n in preamble:
         if number - n in preamble and n != number - n:
-            # print(f'{n} + {number - n} = {number}')
             return True
     return False
 
