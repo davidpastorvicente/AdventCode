@@ -26,10 +26,9 @@ print(ones * threes)
 # Second problem
 
 aux = {0: 1}
-for i in range(1, len(numbers)):
-    number = numbers[i]
+numbers.pop(0)
+for number in numbers:
     aux[number] = 0
-
     if number - 1 in aux:
         aux[number] += aux[number - 1]
     if number - 2 in aux:
