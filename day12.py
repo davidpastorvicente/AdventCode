@@ -49,10 +49,10 @@ print(abs(north) + abs(east))
 
 # Second problem
 
-def rotate(degree, n, e):
-    if degree == 90:
+def rotate(degrees, n, e):
+    if degrees == 90:
         return e, -n
-    elif degree == 180:
+    elif degrees == 180:
         return -n, -e
     else:
         return -e, n
