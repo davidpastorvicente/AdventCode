@@ -19,3 +19,21 @@ for i in range(1, len(buses)):
         bus = buses[i]
 
 print(best * bus)
+
+
+# Second problem
+
+buses = [[int(bus), i] for i, bus in enumerate(lines[1].split(',')) if bus.isdigit()]
+
+num, found = -1, False
+while not found:
+    print(num)
+    num += 1
+    for i in buses:
+        if (num + i[1]) % i[0] == 0:
+            found = True
+        else:
+            found = False
+            break
+
+print(num)
