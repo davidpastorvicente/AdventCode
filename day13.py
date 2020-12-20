@@ -1,5 +1,8 @@
 """Day 13 of 2020 Advent of Code"""
 
+import numpy as np
+import sympy as sp
+
 file = open('./input13.txt')
 text = file.read()
 
@@ -24,16 +27,11 @@ print(best * bus)
 # Second problem
 
 buses = [[int(bus), i] for i, bus in enumerate(lines[1].split(',')) if bus.isdigit()]
+N = np.prod([i[0] for i in buses])
 
-num, found = -1, False
-while not found:
-    print(num)
-    num += 1
-    for i in buses:
-        if (num + i[1]) % i[0] == 0:
-            found = True
-        else:
-            found = False
-            break
+num = 0
+for bus in buses:
+    y = int(N // bus[0])
+    num += y * sp.mod_inverse(y, bus[0]) * (bus[0] - bus[1])
 
-print(num)
+print(num % N)
