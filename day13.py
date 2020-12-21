@@ -31,7 +31,7 @@ N = np.prod([i[0] for i in buses])
 
 num = 0
 for bus in buses:
-    y = int(N // bus[0])
+    y = N // bus[0]
     num += y * sp.mod_inverse(y, bus[0]) * (bus[0] - bus[1])
 
 print(num % N)
