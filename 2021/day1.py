@@ -1,4 +1,4 @@
-"""Day 1 of 2020 Advent of Code"""
+"""Day 1 of 2021 Advent of Code"""
 
 file = open('./input1.txt')
 text = file.read()
