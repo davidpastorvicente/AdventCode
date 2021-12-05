@@ -1,4 +1,5 @@
 """Day 4 of 2021 Advent of Code"""
+
 import numpy as np
 
 file = open('./input4.txt')
