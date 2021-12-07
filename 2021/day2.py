@@ -1,6 +1,6 @@
 """Day 2 of 2021 Advent of Code"""
 
-file = open('./input2.txt')
+file = open('inputs/input2.txt')
 text = file.read()
 
 directions = list(map(lambda x: x.split(), text.split('\n')))

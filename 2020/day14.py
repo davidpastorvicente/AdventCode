@@ -1,6 +1,6 @@
 """Day 13 of 2020 Advent of Code"""
 
-file = open('./input14.txt')
+file = open('inputs/input14.txt')
 text = file.read()
 
 lines = text.split('mask = ')

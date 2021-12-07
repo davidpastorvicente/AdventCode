@@ -3,7 +3,7 @@
 import numpy as np
 import sympy as sp
 
-file = open('./input13.txt')
+file = open('inputs/input13.txt')
 text = file.read()
 
 lines = text.split('\n')

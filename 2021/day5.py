@@ -1,7 +1,7 @@
 """Day 5 of 2021 Advent of Code"""
 import numpy as np
 
-file = open('./input5.txt')
+file = open('inputs/input5.txt')
 text = file.read()
 
 vectors = list(map(lambda x: list(map(lambda y: tuple(map(int, y.split(','))), x.split(' -> '))), text.split('\n')))

@@ -2,7 +2,7 @@
 
 import re
 
-file = open('./input4.txt')
+file = open('inputs/input4.txt')
 text = file.read()
 
 

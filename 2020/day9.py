@@ -1,6 +1,6 @@
 """Day 9 of 2020 Advent of Code"""
 
-file = open('./input9.txt')
+file = open('inputs/input9.txt')
 text = file.read()
 
 lines = text.split('\n')

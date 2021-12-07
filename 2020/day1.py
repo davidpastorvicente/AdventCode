@@ -1,6 +1,6 @@
 """Day 1 of 2020 Advent of Code"""
 
-file = open('./input1.txt')
+file = open('inputs/input1.txt')
 text = file.read()
 
 numbers = list(map(int, text.split('\n')))

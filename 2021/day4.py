@@ -2,7 +2,7 @@
 
 import numpy as np
 
-file = open('./input4.txt')
+file = open('inputs/input4.txt')
 text = file.read()
 
 parts = text.split('\n\n')

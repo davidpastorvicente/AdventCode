@@ -2,7 +2,7 @@
 
 import re
 
-file = open('./input5.txt')
+file = open('inputs/input5.txt')
 text = file.read()
 
 lines = text.split('\n')
