@@ -43,7 +43,6 @@ def count_children(timers, days):
             children[i] = new_children[i+1]
         children[6] += new_children[0]
         children[8] = new_children[0]
-        print(children)
 
     return sum(children)
 
