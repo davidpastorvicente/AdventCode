@@ -5,7 +5,7 @@ import numpy as np
 file = open('inputs/input9.txt')
 text = file.read()
 
-heights = np.array(list(map(lambda x: [int(i) for i in x], text.split('\n'))))
+heights = np.array(list(map(lambda x: [int(c) for c in x], text.split('\n'))))
 
 
 # First problem
@@ -57,4 +57,4 @@ for i in range(len(heights)):
             basins.append(get_basin(heights, i, j, set()))
 
 basins.sort(key=len)
-print(len(basins[-1])*len(basins[-2])*len(basins[-3]))
+print(len(basins[-1]) * len(basins[-2]) * len(basins[-3]))
